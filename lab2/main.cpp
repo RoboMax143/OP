@@ -1,9 +1,9 @@
 #include <iostream>
 
 int main() {
-	setlocale(LC_ALL, "");
 	
-	// 1 Вариант, 1 номер:
+	// 1 var, task 1:
+
 	float x;
 	float y;
 	float p;
@@ -12,7 +12,8 @@ int main() {
 	
 
 	/*
-	// 2 номер:
+	// task 2:
+	
 	float a;
 	float b;
 	std::cin >> a >> b;
