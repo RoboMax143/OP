@@ -1,6 +1,7 @@
 #include <iostream>
 
 int main() {
+	setlocale(LC_ALL, "");
 	
 	// 1 Вариант, 1 номер:
 	float x;
