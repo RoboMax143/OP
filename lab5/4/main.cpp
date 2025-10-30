@@ -1,5 +1,14 @@
 #include <iostream>;
 
+bool IsPrime(int x) {
+    bool isPrime = true;
+    for (int i = 2; i < std::sqrt(x) + 1; ++i) {
+        if (x % i == 0) {
+            isPrime = false;
+        }
+    }
+    return isPrime;
+}
 
 int main() {
     
@@ -7,7 +16,7 @@ int main() {
 
     int n = 0;
     std::cin >> n;
-    int list[10000];
+    int list[20000];
 
     for (int i = 0; i < n; ++i) {
         std::cin >> list[i];
@@ -23,20 +32,31 @@ int main() {
             int digit = temp % 10;
             temp /= 10;
             if (digit == 7) seven = true;
-            if (digit == 6) six == true;
+            if (digit == 6) six = true;
         }
-        if (six == true || seven == false) {
+        if (six|| (!seven)) {
             list[size] = list[i];
             size++;
         }
         else std::cout << "NAHui" << list[i] << std::endl;
     }
 
-    for (int i = 0; i < size; ++i) {
-        std::cout << list[i] << ' ';
+    int i = 0;
+    while (i < size) {
+        if (IsPrime(list[i])) {
+            for (int j = size - 1; j >= i; --j) {
+                list[j + 1] = list[j];
+            }
+            size++;
+            i++;
+        }
+        i++;
+    }
 
 
 
+    for (int j = 0; j < size; ++j) {
+        std::cout << list[j] << ' ';
     }
 
     return 0;
