@@ -35,4 +35,6 @@ int main() {
 	std::cout << *pl << std::endl;
 	std::cout << pl << std::endl;
 	std::cout << &pl << std::endl;
+
+	delete[] pl;
 }
