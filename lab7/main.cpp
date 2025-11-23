@@ -20,8 +20,7 @@ int main() {
 	char* pl = new char[8];
 
 	std::cout << *pl << std::endl;
-	std::cout << pl << std::endl;
-	std::cout << &pl << std::endl;
+	
 
 	*pl = 'A';
 	*(pl + 1) = 'B';
@@ -32,9 +31,11 @@ int main() {
 	*(pl + 6) = 'G';
 	*(pl + 7) = 'H';
 	
-	std::cout << *pl << std::endl;
+	for (int i = 0; i < 8; ++i) {
+		std::cout << *(pl+i) << std::endl;
+	}
+	
 	std::cout << pl << std::endl;
-	std::cout << &pl << std::endl;
 
 	delete[] pl;
 }
