@@ -16,6 +16,10 @@ int main() {
 	
 	removeFirst(vec);
 
+
+
+	
+
 	for (int i = 0; i < vec.size(); ++i) {
 		std::cout << vec[i] << std::endl;
 	}
